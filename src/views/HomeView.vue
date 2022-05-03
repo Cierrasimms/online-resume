@@ -2,7 +2,7 @@
 export default {
   data: function () {
     return {
-      message: "Hello!",
+      message: "Test",
     };
   },
   created: function () {},
