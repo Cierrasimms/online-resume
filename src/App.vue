@@ -5,6 +5,8 @@
     <router-link to="/about">About</router-link>
     |
     <router-link to="/resumes">Resumes</router-link>
+    |
+    <router-link to="/my-resume">My Resume</router-link>
   </nav>
   <router-view />
 </template>

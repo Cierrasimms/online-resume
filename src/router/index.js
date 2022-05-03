@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import ResumeIndex from "../views/ResumeIndex.vue";
+import ResumeShow from "../views/ResumeShow.vue";
 
 const routes = [
   {
@@ -20,6 +21,11 @@ const routes = [
     path: "/resumes",
     name: "resumes",
     component: ResumeIndex,
+  },
+  {
+    path: "/my-resume",
+    name: "my resume",
+    component: ResumeShow,
   },
 ];
 
