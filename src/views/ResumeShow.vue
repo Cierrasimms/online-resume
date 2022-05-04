@@ -2,26 +2,30 @@
   <div class="home">
     <h2>{{ message }}</h2>
   </div>
-
-  <div class="card border-dark mb-3" style="max-width: 18rem">
-    <img
-      src="https://assets.fxnetworks.com/cms/prod/2021/10/07/web_cast_dannydevito_its-always-sunny-in-philadelphia_570x698.jpg"
-      class="rounded mx-auto d-block"
-      alt="user.name"
-    />
-    <div class="card-body">
-      <h5 class="card-title">{{ user.name }}</h5>
-      <p class="card-text">He is Luke</p>
+  <div class="card-columns">
+    <div class="card col-md-3 mx-3" style="max-width: 18rem">
+      <img
+        src="https://assets.fxnetworks.com/cms/prod/2021/10/07/web_cast_dannydevito_its-always-sunny-in-philadelphia_570x698.jpg"
+        class="rounded mx-auto d-block"
+        alt="user.name"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ user.name }}</h5>
+        <p class="card-text">He is Luke</p>
+      </div>
+      <div class="card-body">
+        <a href="#" class="card-link">Card link</a>
+        <br />
+        <a href="#" class="card-link">Another link</a>
+      </div>
     </div>
+  </div>
+  <div class="card">
+    <div class="card-header">About Me</div>
     <div class="card-body">
-      <a href="#" class="card-link">Card link</a>
-      <br />
-      <a href="#" class="card-link">Another link</a>
-    </div>
-    <br />
-
-    <div class="card">
-      <div class="card-body">Luke is a man</div>
+      <blockquote class="blockquote mb-0">
+        <p>I am Luke</p>
+      </blockquote>
     </div>
   </div>
 </template>
