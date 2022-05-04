@@ -28,6 +28,50 @@
       </blockquote>
     </div>
   </div>
+  <div>
+    <section id="resume" class="resume">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Resume</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <h3 class="resume-title"></h3>
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Degree title</h4>
+              <h5>2015 - 2016</h5>
+              <p><em>location</em></p>
+            </div>
+            <div class="resume-item">
+              <h4>Degree title</h4>
+              <h5>2015 - 2016</h5>
+              <p><em>location</em></p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Job title</h4>
+              <h5>2019 - Present</h5>
+              <p><em>Location</em></p>
+
+              <li>What I did</li>
+            </div>
+            <div class="resume-item">
+              <h4>Job title</h4>
+              <h5>2019 - Present</h5>
+              <p><em>Location</em></p>
+
+              <li>What I did</li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -56,9 +100,58 @@ export default {
 </script>
 
 <style>
-.card {
-  border-color: blueviolet;
+.resume .resume-title {
+  text-decoration: underline;
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #45505b;
 }
+.resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #0563bb;
+  position: relative;
+}
+.resume .resume-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #0563bb;
+  margin-bottom: 10px;
+}
+.resume .resume-item h5 {
+  font-size: 16px;
+  background: #f7f8f9;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.resume .resume-item ul {
+  padding-left: 20px;
+}
+.resume .resume-item ul li {
+  padding-bottom: 10px;
+}
+.resume .resume-item:last-child {
+  padding-bottom: 0;
+}
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #0563bb;
+}
+
 img {
   max-width: 50%;
   height: auto;
