@@ -98,8 +98,19 @@ export default {
 </script>
 
 <style>
-.card {
-  border-color: blueviolet;
+.resume .resume-title {
+  text-decoration: underline;
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #45505b;
+}
+.resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #0563bb;
+  position: relative;
 }
 
 img {
