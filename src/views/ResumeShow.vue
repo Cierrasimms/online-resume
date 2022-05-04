@@ -37,8 +37,6 @@
 
         <div class="row">
           <div class="col-lg-6">
-            <h3 class="resume-title">{{ user.name }}</h3>
-
             <h3 class="resume-title">Education</h3>
             <div class="resume-item">
               <h4>Degree title</h4>
@@ -57,34 +55,15 @@
               <h4>Job Title</h4>
               <h5>2019 - Present</h5>
               <p><em>Location</em></p>
-              <ul>
-                <li>
-                  Lead in the design, development, and implementation of the graphic, layout, and production
-                  communication materials
-                </li>
-                <li>
-                  Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project.
-                </li>
-                <li>
-                  Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the
-                  design
-                </li>
-                <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
-              </ul>
+
+              <li>What I did</li>
             </div>
             <div class="resume-item">
               <h4>Job title</h4>
               <h5>2017 - 2018</h5>
               <p><em>Location</em></p>
-              <ul>
-                <li>
-                  Developed numerous marketing programs (logos, brochures,infographics, presentations, and
-                  advertisements).
-                </li>
-                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
-              </ul>
+
+              <li>What I did</li>
             </div>
           </div>
         </div>
@@ -127,8 +106,12 @@ img {
   max-width: 50%;
   height: auto;
 }
+.resume .section-title {
+  text-decoration: underline;
+}
 .resume .resume-title {
   font-size: 26px;
+  text-decoration: underline;
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -176,8 +159,5 @@ img {
   top: 0;
   background: #fff;
   border: 2px solid #0563bb;
-}
-.resume {
-  border-color: blueviolet;
 }
 </style>
