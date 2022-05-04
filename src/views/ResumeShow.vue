@@ -2,7 +2,7 @@
   <div class="home">
     <h2>{{ message }}</h2>
   </div>
-  <div class="card-columns">
+  <div class="col d-flex justify-content-center">
     <div class="card col-md-3 mx-3" style="max-width: 18rem">
       <img
         src="https://assets.fxnetworks.com/cms/prod/2021/10/07/web_cast_dannydevito_its-always-sunny-in-philadelphia_570x698.jpg"
