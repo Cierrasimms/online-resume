@@ -10,8 +10,8 @@
         alt="user.name"
       />
       <div class="card-body">
-        <h5 class="card-title">{{ user.name }}</h5>
-        <p class="card-text">He is Luke</p>
+        <h5 class="card-title">{{ student.first_name }} {{ student.last_name }}</h5>
+        <p class="card-text">He is {{ student.first_name }}</p>
       </div>
       <div class="card-body">
         <a href="#" class="card-link">Card link</a>
@@ -40,16 +40,21 @@
             <h3 class="resume-title"></h3>
 
             <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
+            <div v-for="education in educations" v-bind:key="education.id">
+              <div class="resume-item">
+                <h4>{{ education.degree }}</h4>
+                <h5>{{ education.start_date }} - {{ education.end_date }}</h5>
+                <p>
+                  <em>{{ education.university_name }}</em>
+                </p>
+              </div>
+            </div>
+
+            <!-- <div class="resume-item">
               <h4>Degree title</h4>
               <h5>2015 - 2016</h5>
               <p><em>location</em></p>
-            </div>
-            <div class="resume-item">
-              <h4>Degree title</h4>
-              <h5>2015 - 2016</h5>
-              <p><em>location</em></p>
-            </div>
+            </div> -->
           </div>
           <div class="col-lg-6">
             <h3 class="resume-title">Professional Experience</h3>
@@ -83,16 +88,41 @@ export default {
       message: "Meeeep",
       currentUser: {},
       user: {},
+      student: {},
+      educations: [],
+      experiences: [],
     };
   },
   created: function () {
     this.resumeShow();
+    this.studentShow();
+    this.educationShow();
+    this.experienceShow();
   },
   methods: {
     resumeShow: function () {
       axios.get("https://swapi.dev/api/people/1/").then((response) => {
-        console.log(response.data);
+        // console.log(response.data);
         this.user = response.data;
+      });
+    },
+    studentShow: function () {
+      axios.get("/students/1").then((response) => {
+        console.log(response.data);
+        this.student = response.data;
+      });
+    },
+    educationShow: function () {
+      axios.get("/educations").then((response) => {
+        console.log(response.data);
+        this.educations = response.data;
+      });
+    },
+    experienceShow: function () {
+      axios.get("/experiences").then((response) => {
+        // There is currently no data for experiences, so it currently returns nothing
+        console.log(response.data);
+        this.experiences = response.data;
       });
     },
   },
