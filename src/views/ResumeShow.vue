@@ -1,8 +1,6 @@
 <template>
   <div class="home">
-    <h1>{{ message }}</h1>
-    <h2>{{ user.name }}</h2>
-    <p>{{ user.mass }}</p>
+    <h2>{{ message }}</h2>
   </div>
 </template>
 
@@ -12,7 +10,7 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      message: "Welcome to Vue.js!",
+      message: "Meeeep",
       currentUser: {},
       user: {},
     };
