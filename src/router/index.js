@@ -23,7 +23,7 @@ const routes = [
     component: ResumeIndex,
   },
   {
-    path: "/my-resume",
+    path: "/my-resume/:id",
     name: "my resume",
     component: ResumeShow,
   },

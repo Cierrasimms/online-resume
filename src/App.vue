@@ -6,7 +6,7 @@
     |
     <router-link to="/resumes">Resumes</router-link>
     |
-    <router-link to="/my-resume">My Resume</router-link>
+    <router-link to="/my-resume/:id">My Resume</router-link>
   </nav>
   <router-view />
 </template>
