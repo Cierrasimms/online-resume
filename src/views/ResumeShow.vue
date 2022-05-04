@@ -2,10 +2,11 @@
   <div class="home">
     <h2>{{ message }}</h2>
   </div>
-  <div class="card" style="width: 18rem">
+
+  <div class="card border-dark mb-3" style="max-width: 18rem">
     <img
       src="https://assets.fxnetworks.com/cms/prod/2021/10/07/web_cast_dannydevito_its-always-sunny-in-philadelphia_570x698.jpg"
-      class="card-img-top"
+      class="rounded mx-auto d-block"
       alt="user.name"
     />
     <div class="card-body">
@@ -16,6 +17,11 @@
       <a href="#" class="card-link">Card link</a>
       <br />
       <a href="#" class="card-link">Another link</a>
+    </div>
+    <br />
+
+    <div class="card">
+      <div class="card-body">Luke is a man</div>
     </div>
   </div>
 </template>
@@ -46,9 +52,8 @@ export default {
 </script>
 
 <style>
-.selected .card-body {
-  color: rgb(78, 24, 186);
-  background-color: rgb(233, 198, 246);
+.card {
+  border-color: blueviolet;
 }
 img {
   max-width: 50%;
