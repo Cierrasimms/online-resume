@@ -1,22 +1,22 @@
 <template>
   <div class="home">
-    <h2>{{ message }}</h2>
+    <h2>{{ user.first_name }} {{ user.last_name }}</h2>
   </div>
   <div class="col d-flex justify-content-center">
     <div class="card col-md-3 mx-3" style="max-width: 18rem">
       <img
-        src="https://assets.fxnetworks.com/cms/prod/2021/10/07/web_cast_dannydevito_its-always-sunny-in-philadelphia_570x698.jpg"
+        src="https://i1.sndcdn.com/artworks-000250680664-2frnod-t500x500.jpg"
         class="rounded mx-auto d-block"
-        alt="user.name"
+        alt="student.first_name"
       />
       <div class="card-body">
         <h5 class="card-title">{{ student.first_name }} {{ student.last_name }}</h5>
         <p class="card-text">He is {{ student.first_name }}</p>
       </div>
       <div class="card-body">
-        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">{{ student.email }}</a>
         <br />
-        <a href="#" class="card-link">Another link</a>
+        <a href="#" class="card-link">{{ student.phone_number }}</a>
       </div>
     </div>
   </div>
@@ -24,8 +24,11 @@
     <div class="card-header">About Me</div>
     <div class="card-body">
       <blockquote class="blockquote mb-0">
-        <p>I am Luke</p>
+        <h2>I am {{ student.first_name }}</h2>
       </blockquote>
+      <p>{{ student.short_bio }}</p>
+      <h5>LinkedIn: {{ student.linkedin_url }}</h5>
+      <h5>GitHub: {{ student.github_url }}</h5>
     </div>
   </div>
   <div>
@@ -57,25 +60,24 @@
             </div> -->
           </div>
           <div class="col-lg-6">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Job title</h4>
-              <h5>2019 - Present</h5>
-              <p><em>Location</em></p>
+            <div>
+              <h3 class="resume-title">Professional Experience</h3>
+              <div v-for="experience in experiences" v-bind:key="experience.id" class="resume-item">
+                <h4>{{ experience.job_title }}</h4>
+                <h5>2019 - Present</h5>
 
-              <li>What I did</li>
-            </div>
-            <div class="resume-item">
-              <h4>Job title</h4>
-              <h5>2019 - Present</h5>
-              <p><em>Location</em></p>
-
-              <li>What I did</li>
+                <li>{{ experience.details }}</li>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+  </div>
+  <div>
+    <a class="twitter-timeline" data-width="500" data-height="900" href="https://twitter.com/WGNMorningNews">
+      Tweets by WGNMorningNews
+    </a>
   </div>
 </template>
 
@@ -85,13 +87,18 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      message: "Meeeep",
       currentUser: {},
       user: {},
       student: {},
       educations: [],
       experiences: [],
     };
+  },
+  mounted() {
+    let externalScript = document.createElement("script");
+    externalScript.setAttribute("src", "https://platform.twitter.com/widgets.js");
+
+    document.head.appendChild(externalScript);
   },
   created: function () {
     this.resumeShow();
@@ -240,5 +247,13 @@ img {
   background: #fff;
   background-color: grey;
   border: 2px solid #0563bb;
+}
+body {
+  background-color: rgba(183, 171, 171, 0.508);
+}
+.card {
+  margin-bottom: 15px;
+  background-color: rgb(205, 231, 238);
+  font-family: "Roboto", sans-serif;
 }
 </style>
