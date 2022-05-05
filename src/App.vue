@@ -1,6 +1,15 @@
 <template>
-  <nav>
-    <router-link to="/my-resume/:id">My Resume</router-link>
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="">
+      <img
+        src="https://purepng.com/public/uploads/thumbnail/google-stadia-logo-hd4.png"
+        width="50"
+        height="50"
+        class="d-inline-block align-top"
+        alt=""
+      />
+      My Resume
+    </a>
   </nav>
   <router-view />
 </template>
