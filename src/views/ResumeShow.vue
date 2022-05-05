@@ -5,9 +5,9 @@
   <div class="col d-flex justify-content-center">
     <div class="card col-md-3 mx-3" style="max-width: 18rem">
       <img
-        src="https://assets.fxnetworks.com/cms/prod/2021/10/07/web_cast_dannydevito_its-always-sunny-in-philadelphia_570x698.jpg"
+        src="https://i1.sndcdn.com/artworks-000250680664-2frnod-t500x500.jpg"
         class="rounded mx-auto d-block"
-        alt="user.name"
+        alt="student.first_name"
       />
       <div class="card-body">
         <h5 class="card-title">{{ student.first_name }} {{ student.last_name }}</h5>
@@ -24,8 +24,9 @@
     <div class="card-header">About Me</div>
     <div class="card-body">
       <blockquote class="blockquote mb-0">
-        <p>I am Luke</p>
+        <p>I am {{ student.first_name }}</p>
       </blockquote>
+      <p>{{ student.short_bio }}</p>
     </div>
   </div>
   <div>
