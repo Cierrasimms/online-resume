@@ -49,19 +49,16 @@
                 </p>
               </div>
             </div>
-
-            <!-- <div class="resume-item">
-              <h4>Degree title</h4>
-              <h5>2015 - 2016</h5>
-              <p><em>location</em></p>
-            </div> -->
           </div>
           <div class="col-lg-6">
             <h3 class="resume-title">Professional Experience</h3>
+            <div v-for="experience in experiences" v-bind:key="experience.id"></div>
             <div class="resume-item">
-              <h4>Job title</h4>
-              <h5>2019 - Present</h5>
-              <p><em>Location</em></p>
+              <h4>{{ experience.job_title }}</h4>
+              <h5>{{ experience.start_date }}</h5>
+              <p>
+                <em>{{ experience.details }}</em>
+              </p>
 
               <li>What I did</li>
             </div>
