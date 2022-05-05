@@ -12,6 +12,15 @@
       <div class="card-body">
         <h5 class="card-title">{{ student.first_name }} {{ student.last_name }}</h5>
         <p class="card-text">He is {{ student.first_name }}</p>
+        <iframe
+          width="200"
+          height="200"
+          src="https://www.youtube.com/embed/F7JBhOWjz_c"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
       <div class="card-body">
         <a href="#" class="card-link">{{ student.email }}</a>
@@ -19,6 +28,7 @@
         <a href="#" class="card-link">{{ student.phone_number }}</a>
       </div>
     </div>
+    <br />
   </div>
   <div class="col d-flex justify-content-center">
     <div class="card col-md-3 mx-3" style="max-width: 18rem">
