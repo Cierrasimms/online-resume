@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h2>{{ message }}</h2>
+    <h2>{{ user.first_name }} {{ user.last_name }}</h2>
   </div>
   <div class="col d-flex justify-content-center">
     <div class="card col-md-3 mx-3" style="max-width: 18rem">
@@ -20,12 +20,14 @@
       </div>
     </div>
   </div>
-  <div class="card">
-    <div class="card-header">About Me</div>
-    <div class="card-body">
-      <blockquote class="blockquote mb-0">
-        <p>I am Luke</p>
-      </blockquote>
+  <div class="col d-flex justify-content-center">
+    <div class="card col-md-3 mx-3" style="max-width: 50rem">
+      <div class="card-header">About Me</div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>I am Luke</p>
+        </blockquote>
+      </div>
     </div>
   </div>
   <div>
@@ -90,7 +92,6 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      message: "Meeeep",
       currentUser: {},
       user: {},
       student: {},
@@ -250,5 +251,13 @@ img {
   top: 0;
   background: #fff;
   border: 2px solid #0563bb;
+}
+body {
+  background-color: rgba(183, 171, 171, 0.508);
+}
+.card {
+  margin-bottom: 15px;
+  background-color: rgb(205, 231, 238);
+  font-family: "Roboto", sans-serif;
 }
 </style>
