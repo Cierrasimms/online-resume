@@ -77,6 +77,11 @@
       </div>
     </section>
   </div>
+  <div>
+    <a class="twitter-timeline" data-width="500" data-height="900" href="https://twitter.com/WGNMorningNews">
+      Tweets by WGNMorningNews
+    </a>
+  </div>
 </template>
 
 <script>
@@ -92,6 +97,12 @@ export default {
       educations: [],
       experiences: [],
     };
+  },
+  mounted() {
+    let externalScript = document.createElement("script");
+    externalScript.setAttribute("src", "https://platform.twitter.com/widgets.js");
+
+    document.head.appendChild(externalScript);
   },
   created: function () {
     this.resumeShow();
