@@ -14,9 +14,9 @@
         <p class="card-text">He is {{ student.first_name }}</p>
       </div>
       <div class="card-body">
-        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">{{ student.email }}</a>
         <br />
-        <a href="#" class="card-link">Another link</a>
+        <a href="#" class="card-link">{{ student.phone_number }}</a>
       </div>
     </div>
   </div>
@@ -24,9 +24,11 @@
     <div class="card-header">About Me</div>
     <div class="card-body">
       <blockquote class="blockquote mb-0">
-        <p>I am {{ student.first_name }}</p>
+        <h2>I am {{ student.first_name }}</h2>
       </blockquote>
       <p>{{ student.short_bio }}</p>
+      <h5>LinkedIn: {{ student.linkedin_url }}</h5>
+      <h5>GitHub: {{ student.github_url }}</h5>
     </div>
   </div>
   <div>
@@ -58,20 +60,14 @@
             </div> -->
           </div>
           <div class="col-lg-6">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Job title</h4>
-              <h5>2019 - Present</h5>
-              <p><em>Location</em></p>
+            <div>
+              <h3 class="resume-title">Professional Experience</h3>
+              <div v-for="experience in experiences" v-bind:key="experience.id" class="resume-item">
+                <h4>{{ experience.job_title }}</h4>
+                <h5>2019 - Present</h5>
 
-              <li>What I did</li>
-            </div>
-            <div class="resume-item">
-              <h4>Job title</h4>
-              <h5>2019 - Present</h5>
-              <p><em>Location</em></p>
-
-              <li>What I did</li>
+                <li>{{ experience.details }}</li>
+              </div>
             </div>
           </div>
         </div>
