@@ -75,8 +75,13 @@
     </section>
   </div>
   <div>
-    <a class="twitter-timeline" data-width="500" data-height="900" href="https://twitter.com/WGNMorningNews">
-      Tweets by WGNMorningNews
+    <a
+      class="twitter-timeline"
+      data-width="500"
+      data-height="900"
+      v-bind:href="`https://twitter.com/` + student.twitter_handle"
+    >
+      Tweets by {{ student.twitter_handle }}
     </a>
   </div>
 </template>
