@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h2>{{ message }}</h2>
+    <h2>{{ user.first_name }} {{ user.last_name }}</h2>
   </div>
   <div class="col d-flex justify-content-center">
     <div class="card col-md-3 mx-3" style="max-width: 18rem">
@@ -20,12 +20,14 @@
       </div>
     </div>
   </div>
-  <div class="card">
-    <div class="card-header">About Me</div>
-    <div class="card-body">
-      <blockquote class="blockquote mb-0">
-        <p>I am Luke</p>
-      </blockquote>
+  <div class="col d-flex justify-content-center">
+    <div class="card col-md-3 mx-3" style="max-width: 50rem">
+      <div class="card-header">About Me</div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>I am Luke</p>
+        </blockquote>
+      </div>
     </div>
   </div>
   <div>
@@ -49,16 +51,19 @@
                 </p>
               </div>
             </div>
+
+            <!-- <div class="resume-item">
+              <h4>Degree title</h4>
+              <h5>2015 - 2016</h5>
+              <p><em>location</em></p>
+            </div> -->
           </div>
           <div class="col-lg-6">
             <h3 class="resume-title">Professional Experience</h3>
-            <div v-for="experience in experiences" v-bind:key="experience.id"></div>
             <div class="resume-item">
-              <h4>{{ experience.job_title }}</h4>
-              <h5>{{ experience.start_date }}</h5>
-              <p>
-                <em>{{ experience.details }}</em>
-              </p>
+              <h4>Job title</h4>
+              <h5>2019 - Present</h5>
+              <p><em>Location</em></p>
 
               <li>What I did</li>
             </div>
@@ -87,7 +92,6 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      message: "Meeeep",
       currentUser: {},
       user: {},
       student: {},
@@ -247,5 +251,13 @@ img {
   top: 0;
   background: #fff;
   border: 2px solid #0563bb;
+}
+body {
+  background-color: rgba(183, 171, 171, 0.508);
+}
+.card {
+  margin-bottom: 15px;
+  background-color: rgb(205, 231, 238);
+  font-family: "Roboto", sans-serif;
 }
 </style>
