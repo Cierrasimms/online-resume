@@ -238,6 +238,7 @@ img {
   left: -9px;
   top: 0;
   background: #fff;
+  background-color: grey;
   border: 2px solid #0563bb;
 }
 </style>
