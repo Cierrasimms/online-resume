@@ -6,7 +6,7 @@
     <div class="card col-md-3 mx-3" style="max-width: 18rem">
       <img
         src="https://i1.sndcdn.com/artworks-000250680664-2frnod-t500x500.jpg"
-        class="rounded mx-auto d-block"
+        class="circular--square"
         alt="student.first_name"
       />
       <div class="card-body">
@@ -20,15 +20,17 @@
       </div>
     </div>
   </div>
-  <div class="card">
-    <div class="card-header">About Me</div>
-    <div class="card-body">
-      <blockquote class="blockquote mb-0">
-        <h2>I am {{ student.first_name }}</h2>
-      </blockquote>
-      <p>{{ student.short_bio }}</p>
-      <h5>LinkedIn: {{ student.linkedin_url }}</h5>
-      <h5>GitHub: {{ student.github_url }}</h5>
+  <div class="col d-flex justify-content-center">
+    <div class="card col-md-3 mx-3" style="max-width: 18rem">
+      <div class="card-header">About Me</div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <h2>I am {{ student.first_name }}</h2>
+        </blockquote>
+        <p>{{ student.short_bio }}</p>
+        <h5>LinkedIn: {{ student.linkedin_url }}</h5>
+        <h5>GitHub: {{ student.github_url }}</h5>
+      </div>
     </div>
   </div>
   <div>
@@ -42,7 +44,7 @@
           <div class="col-lg-6">
             <h3 class="resume-title"></h3>
 
-            <h3 class="resume-title">Education</h3>
+            <h3 class="resume-education">Education</h3>
             <div v-for="education in educations" v-bind:key="education.id">
               <div class="resume-item">
                 <h4>{{ education.degree }}</h4>
@@ -61,7 +63,7 @@
           </div>
           <div class="col-lg-6">
             <div>
-              <h3 class="resume-title">Professional Experience</h3>
+              <h3 class="resume-experience">Professional Experience</h3>
               <div v-for="experience in experiences" v-bind:key="experience.id" class="resume-item">
                 <h4>{{ experience.job_title }}</h4>
                 <h5>2019 - Present</h5>
@@ -75,8 +77,13 @@
     </section>
   </div>
   <div>
-    <a class="twitter-timeline" data-width="500" data-height="900" href="https://twitter.com/WGNMorningNews">
-      Tweets by WGNMorningNews
+    <a
+      class="twitter-timeline"
+      data-width="500"
+      data-height="900"
+      v-bind:href="`https://twitter.com/` + student.twitter_handle"
+    >
+      Tweets by {{ student.twitter_handle }}
     </a>
   </div>
 </template>
@@ -143,12 +150,12 @@ export default {
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #45505b;
+  color: #000000;
 }
 .resume .resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
-  border-left: 2px solid #0563bb;
+  border-left: 2px solid #000000;
   position: relative;
 }
 .resume .resume-item h4 {
@@ -157,7 +164,7 @@ export default {
   font-weight: 600;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: #0563bb;
+  color: #000000;
   margin-bottom: 10px;
 }
 .resume .resume-item h5 {
@@ -186,12 +193,28 @@ export default {
   left: -9px;
   top: 0;
   background: #fff;
-  border: 2px solid #0563bb;
+  border: 2px solid #000000;
 }
+.circular--square {
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 
+  padding: 5px;
+}
+.resume .resume-education {
+  color: black;
+  text-decoration: underline;
+}
+.resume .resume-experience {
+  color: black;
+  text-decoration: underline;
+}
 img {
-  max-width: 50%;
+  max-width: 70%;
   height: auto;
+  border-radius: 70%;
 }
 .resume .section-title {
   text-decoration: underline;
@@ -249,11 +272,21 @@ img {
   border: 2px solid #0563bb;
 }
 body {
-  background-color: rgba(183, 171, 171, 0.508);
+  background-image: url("https://coolbackgrounds.io/images/backgrounds/index/sea-edge-79ab30e2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .card {
   margin-bottom: 15px;
-  background-color: rgb(205, 231, 238);
+  /* background-color: rgb(205, 231, 238); */
+  background-image: url("https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png");
   font-family: "Roboto", sans-serif;
+}
+h5 {
+  font-weight: bolder;
+  color: black;
+}
+h4 {
+  color: black;
 }
 </style>
