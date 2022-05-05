@@ -1,14 +1,14 @@
 <template>
   <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="">
       <img
-        src="/docs/4.0/assets/brand/bootstrap-solid.svg"
-        width="30"
-        height="30"
+        src="https://purepng.com/public/uploads/thumbnail/google-stadia-logo-hd4.png"
+        width="50"
+        height="50"
         class="d-inline-block align-top"
         alt=""
       />
-      Bootstrap
+      My Resume
     </a>
   </nav>
   <router-view />
